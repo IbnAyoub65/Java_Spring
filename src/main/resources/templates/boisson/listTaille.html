@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/screen.css">
+    <link rel="stylesheet" th:href="@{/stylesheets/screen.css}">
+    <title>Document</title>
+</head>
+<body>
+
+  
+    <header class="navbar">
+        <div class="logo">
+            <p>LOGO</p>
+        </div>
+   <ul class="menuderoulant">
+    <li><a href="#">Burger</a>
+        <ul class="sousmenu">
+            <li><a th:href="@{/admin/add-burger}">Ajout</a></li>
+            <li><a th:href="@{/admin/burger}">Liste</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Menu</a>
+        <ul class="sousmenu">
+            <li><a th:href="@{/admin/add-menu}">Ajout</a></li>
+            <li><a href="">Liste</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Boisson</a>
+        <ul class="sousmenu">
+            <li><a th:href="@{/admin/add-boisson}">Ajout Boisson</a></li>
+            <li><a href="">Liste Boisson</a></li>
+            <li><a th:href="@{/admin/boisson/add-taille}">Ajout Taille</a></li>
+            <li><a href="">Liste Taille</a></li>
+            
+        </ul>
+    </li>
+    <li><a href="#">Fritte</a>
+        <ul class="sousmenu">
+            <li><a href="">Ajout Fritte</a></li>
+            <li><a href="">Liste Fritte</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Commandes</a>
+        <ul class="sousmenu">
+            <li><a href="">Listes</a></li>
+        </ul>
+    </li>
+   </ul>
+   <div id="admin-deconnexion" class="connex-inscrip">
+      
+    <li ><a href="">Deconnexion</a></li> 
+</div>
+    </header>
+<body>
+
+
+<table >
+    <tr><td scope="col">#</td>
+        <td scope="col">Nom</td>
+        <td scope="col">Prix</td>
+        <td scope="col">Action</td>
+        <tr th:each="t: ${tailles}">
+            <td th:text="${t.id}"></td>
+            <td th:text="${t.nom}"></td>
+            <td th:text="${t.prix}"></td>
+            <td><a class="detail2" href="">edit</a></td>
+        </tr>
+</table> 
+
+
+
+</body>
+</html>

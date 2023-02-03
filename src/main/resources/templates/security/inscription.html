@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Inscription</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{stylesheets/screen.css}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <style>
+        span {
+            color:red;
+            margin-left: 3%;
+        }
+    </style>
+    <form th:action="@{/inscription}" th:object="${user}" method="POST">
+        <div class="ajout-burger" > 
+          <h1>Inscription</h1>
+          <div>
+              <label>Nom</label><br/>
+              <input  type="text" class="form-control" th:field="*{nom}" id="floatingInput">
+              <span th:errors="${user.nom}"></span>
+          </div>
+         
+          <div>
+              <label>Prenom</label><br/>
+              <input  type="text" class="form-control" th:field="*{prenom}" id="floatingInput">
+              <span th:errors="${user.prenom}"></span>
+          </div>
+          <div>
+            <label>Password</label><br/>
+            <input  type="password" class="form-control" th:field="*{password}" id="floatingInput">
+            <span th:errors="${user.password}"></span>
+         </div>
+         <div>
+            <label>Email</label><br/>
+            <input  type="email" class="form-control" th:field="*{email}" id="floatingInput">
+            <span th:errors="${user.email}"></span>
+        </div><br/>
+          <button type="submit" class="btn btn-primary">Inscription</button>
+      </div> 
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/*
+
+<div class="container">
+    <div class="row">
+      <div class="col-5">
+        <form th:action="@{/menu-add}" th:object="${menu}" method="post" enctype="multipart/form-data">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" th:field="*{menu.nom}" id="nom">
+            <label for="floatingInput">Nom</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" th:field="*{menu.prix}" id="prix">
+            <label for="floatingInput">Prix</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" th:field="*{menu.description}" id="floatingInput">
+            <label for="floatingInput">Description</label>
+          </div>
+  
+          <div>
+            <label>Image</label>
+            <input type="file" name="fileImage"class="form-control"  id="floatingInput" accept="images/png, images/jpeg">
+          </div>
+  
+          <div class="form-floating mb-3 getter" th:each="b : ${burgers}">
+            <label for="floatingInput"  th:text="${b.nom}"></label><br/><br/>
+            <input type="checkbox" name="burgers" th:field="*{burgers}" id="" th:value="${b.id}"><br/><br/>
+            <label for="">quantite</label><br/><br/>
+            <input type="text" th:field="*{quantiteBurger}">
+          </div>
+  
+          <div class="form-floating mb-3" th:each="f : ${frites}">
+            <label for="floatingInput"  th:text="${f.nom}"></label><br/><br/>
+            <input type="checkbox" name="frites" id="" th:field="*{frites}" th:value="${f.id}"><br/><br/>
+            <label for="">quantite</label><br/><br/>
+            <input type="text" th:field="*{quantiteFrite}">
+          </div>
+  
+        <!--<div class="form-floating mb-3" th:each="t : ${tailles}">
+            <label for="floatingInput"  th:text="${t.nom}"></label><br/><br/>
+            <input type="checkbox" name="tailles" id="" th:field="*{tailles}" th:value="${t.id}">
+            <label for="">quantite</label><br/><br/>
+            <input type="text" th:field="*{quantiteTaille}">
+          </div>-->
+          <!--<div>
+            <div th:each=" b : ${burgers}">
+              <label th:field="*{b.nom}"></label>
+              <input type="checkbox" th:field="*{burgers}" th:value="*{b.id}" name="checkboxForm"class="form-control"   id="floatingInput">
+              <input type="text" th:field="*{quantiteBurger}">
+            </div>
+  
+          </div>
+  
+          <select  class="form-select" aria-label="Default select example">
+            <option th:each=" f : ${frites}" th:value="${f.id}" th:text="${f.nom}">
+            </option>
+          </select>
+          <input type="text" th:field="*{quantiteFrite}">
+  
+          <select class="form-select" aria-label="Default select example">
+            <option th:each=" t : ${tailes}" th:value="${t.id}" th:text="${t.nom}">
+            </option>
+          </select>
+          <input type="text" th:field="*{quantiteTaille}">-->
+  
+          <div class="mb-5">
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+  </html>
+*/

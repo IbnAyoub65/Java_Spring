@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/screen.css">
+    <link rel="stylesheet" th:href="@{/stylesheets/screen.css}">
+    <title>Document</title>
+</head>
+<body>
+
+  
+    <header class="navbar">
+        <div class="logo">
+            <p>LOGO</p>
+        </div>
+   <ul class="menuderoulant">
+    <li><a href="#">Burger</a>
+        <ul class="sousmenu">
+            <li><a th:href="@{/admin/add-burger}">Ajout</a></li>
+            <li><a th:href="@{/admin/burger}">Liste</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Menu</a>
+        <ul class="sousmenu">
+            <li><a th:href="@{/admin/add-menu}">Ajout</a></li>
+            <li><a href="">Liste</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Boisson</a>
+        <ul class="sousmenu">
+            <li><a th:href="@{/admin/add-boisson}">Ajout Boisson</a></li>
+            <li><a href="">Liste Boisson</a></li>
+            <li><a th:href="@{/admin/boisson/add-taille}">Ajout Taille</a></li>
+            <li><a th:href="@{/admin/taille}">Liste Taille</a></li>
+            
+        </ul>
+    </li>
+    <li><a href="#">Fritte</a>
+        <ul class="sousmenu">
+            <li><a href="">Ajout Fritte</a></li>
+            <li><a href="">Liste Fritte</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Commandes</a>
+        <ul class="sousmenu">
+            <li><a href="">Listes</a></li>
+        </ul>
+    </li>
+   </ul>
+   <div id="admin-deconnexion" class="connex-inscrip">
+      
+    <li ><a href="">Deconnexion</a></li> 
+</div>
+    </header>
+<body>
+
+
+<div class="">
+    <table >
+        <tr><td scope="col">#</td>
+            <td scope="col">Nom</td>
+            <td scope="col">Image</td>
+            <td scope="col">Prix</td>
+            <td scope="col">Description</td>
+            <td scope="col">Action</td></tr>
+            <tr th:each="b: ${burgers.content}">
+                <td th:text="${b.id}"></td>
+                <td th:text="${b.nom}"></td>
+                <td ><img th:src="@{${'/images/' + b.image }}" alt=""width="10%"height="10%"></td>
+                <td th:text="${b.prix}"></td>
+                <td th:text="${b.description}"></td>
+                <td><a style="text-decoration:none;" class="detail2" th:href="@{/admin/burger/edit/{id}(id=${b.id})}">edit</a><a style="text-decoration:none;" class="detail1" th:href="@{/admin/burger/edit/{id}(id=${b.id})}">Supprimer</a></td>
+            </tr>
+         <tr>
+            <td>
+                <div class="pag-burger" style="margin-top:6%;margin-left:18%;">
+                    <ul style="display:flex;text-align:center;" >
+                     <li th:each="p : ${pages}" >
+                        <a style="padding:10px;text-decoration:none;background:black;
+                        padding:5px;color:white;border:0px solid white;border-radius:5px;"
+                            th:text="${p}" th:href="@{/admin/burger(page=${p})}">
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+         </tr>
+
+    </table> 
+</div>
+
+
+
+
+</body>
+</html>

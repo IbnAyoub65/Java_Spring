@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/screen.css">
+    <link rel="stylesheet" th:href="@{/stylesheets/screen.css}">
+    <title>Document</title>
+</head>
+<body>
+
+  
+    <header class="navbar">
+        <div class="logo">
+            <p>LOGO</p>
+        </div>
+   <ul class="menuderoulant">
+    <li><a href="#">Burger</a>
+        <ul class="sousmenu">
+            <li><a th:href="@{/admin/add-burger}">Ajout</a></li>
+            <li><a th:href="@{/admin/burger}">Liste</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Menu</a>
+        <ul class="sousmenu">
+            <li><a th:href="@{/admin/add-menu}">Ajout</a></li>
+            <li><a href="">Liste</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Boisson</a>
+        <ul class="sousmenu">
+            <li><a th:href="@{/admin/add-boisson}">Ajout Boisson</a></li>
+            <li><a href="">Liste Boisson</a></li>
+            <li><a href="">Ajout Taille</a></li>
+            <li><a href="">Liste Taille</a></li>
+            
+        </ul>
+    </li>
+    <li><a href="#">Fritte</a>
+        <ul class="sousmenu">
+            <li><a th:href="@{/admin/add-boisson}">Ajout Fritte</a></li>
+            <li><a href="">Liste Fritte</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Commandes</a>
+        <ul class="sousmenu">
+            <li><a href="">Listes</a></li>
+        </ul>
+    </li>
+   </ul>
+   <div id="admin-deconnexion" class="connex-inscrip">
+      
+    <li ><a href="">Deconnexion</a></li> 
+</div>
+    </header>
+<body>
+<h1>Ajout Burger</h1>
+<form th:action="@{/add-fritte}" th:object="${fritte}" method="POST" enctype="multipart/form-data">
+    <div>
+        <label>Nom</label>
+        <input type="text" class="form-control" th:field="*{nom}" id="floatingInput">
+    </div>
+    <div>
+        <label>Image</label>
+        <input type="file" name="fileImage"class="form-control"  id="floatingInput" accept="images/png, images/jpeg">
+
+    </div>
+    <div>
+        <label>Prix</label>
+        <input type="text" class="form-control" th:field="*{prix}" id="floatingInput">
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+   
+</form>
+</body>
+</html>

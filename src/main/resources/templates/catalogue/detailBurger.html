@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmln="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="stylesheets/screen.css"> -->
+        <link rel="stylesheet" th:href="@{/stylesheets/screen.css}">
+        <title>Document</title>
+    </head>
+<body>
+
+  
+    <header class="navbar">
+        <div class="logo">
+            <p>LOGO</p>
+        </div>
+    <nav>
+        <ul>
+            <li><a href="">ACCUEUIL</a></li>
+            <li><a href="">A PROPOS</a></li>
+            <li><a href="">CONTACT</a></li>
+            <li><a href="">PANIER</a></li>
+            
+        </ul>
+    </nav>
+    <div class="connex-inscrip">
+        <li><a href="">LOGIN</a></li>  
+        <li><a href="">INSCRIPTION</a></li> 
+    </div>
+    </header>
+<div class="accueil">
+  <div class="img-accueil">
+    <img src="/images/pexels-israel-albornoz-12034622__1_-removebg-preview.png"width="500px">
+  </div>
+  <div class="text">
+    <p><h2 class="h2">Qu'est-ce qu'un bon burger ?</h2>
+        Un bon burger, c'est avant tout un bon pain.Pain, bun, ou encore hamburger bun, si son nom importe peu,<br/>
+        il représente pourtant un ingrédient essentiel d'un bon burger.Un bon pain doit être croustillant à l'extérieur,<br/>
+        avec une mie à la fois aérée et moelleuse à l'intérieur. Pour le decouvrir alors venez chez-nous à BRAZIL-BURGER 
+        pour gouter le meilleur burger du monde</p><br/>
+    <button>ESSAYEZ!!!</button>
+  </div>
+</div>
+
+
+    <div class="" th:each="b: ${burger}">
+        <div class="">
+            <div class="">
+              <img th:src="@{${'/images/' + b.image }}" alt=""width="100%"height="100%">
+            </div>
+            <div class="">
+                <p>Nom : <span th:text="${b.nom}"></span></p>
+                <p>Prix :<span th:text="${b.prix}" ></span>F</p>
+                <p>Description :<span th:text="${b.description}" ></span></p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

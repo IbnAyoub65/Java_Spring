@@ -1,0 +1,528 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "./_mixins";
+@import "./_variables";
+@import "./placeholder";
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: $display-flex;
+    align-items: center;
+    padding: 15px;
+    background-color:$color-black;
+    box-shadow: 5px 0px 10px;
+    position: relative;
+
+}
+
+.navbars {
+    display: $display-flex;
+    align-items: center;
+    padding: 15px;
+    background-color:$color-black;
+    box-shadow: 5px 0px 10px;
+    position: relative;
+
+}
+
+
+
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 10%;
+}
+
+nav ul li{
+ 
+    display: inline-block;
+    margin-right: 25px;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    margin-left:4%;
+    background:#F76529;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+.logo p {
+    width: 25%;
+    color:$color-white;
+   
+}
+
+.connex-inscrip {
+    display: flex;
+}
+
+.connex-inscrip li{
+    display: inline-block;
+    margin-right: 20px;
+    background-color: #F76529;
+    padding: 10px 5px;
+    border-radius: 5px;
+    
+}
+
+.connex-inscrip li a{
+    text-decoration: none;
+    color: $color-white;
+   
+}
+.com{
+    background-color: $color-orange;
+    @include height(50px,1px solid);
+    box-shadow: 0 0 10px;
+    display: $display-flex;
+}
+
+
+
+
+
+
+
+
+.accueil {
+    background-color: #F76529;
+    height: 72vh;
+    margin-top: 0%;
+    display: flex;
+    
+  
+}
+.img-accueil img{
+
+    margin-top: -14%;
+}
+.text{
+    color: white;
+    margin-top: 15%;
+    margin-left: 7%;
+}
+.text p{
+   
+    margin-left: 8%;
+    color:white;
+    text-align: right;
+    position: absolute;
+   
+}
+
+.h2{
+    margin-left: 0%;
+    background: white;
+    color: #F76529;
+    border:2px solid #F76529;
+    width: 27%;
+    font-size: 14px;
+    padding: 5px 5px;
+  
+}
+
+.titre-text h1{
+    text-align: center;
+    background-color: #F76529;
+    padding: 10px 5px;
+    width: 25%;
+    color:#fff;
+}
+.text p h2{
+    text-align: center;
+}
+.img-4{
+    margin-left:20%;
+    border: 0px solid black;
+    width: 100%;
+    background-color: #F76529;
+    height:280px;
+  
+}
+.titre-text{
+    margin-left: 3%;
+}
+.img-2{
+    width: 100%;
+    margin: 0%;
+    display: flex;
+}
+
+.img-2 img{
+    margin-left: 0%;
+    margin: 1%;
+}
+
+.img-3 img {
+    margin:1%;
+}
+.img-3{
+    width: 100%;
+    margin: 0%;
+    display: flex;
+}
+
+
+.titre-text p{
+    width: 100%;
+    margin-left: 10%;
+    margin-top: 18%;
+}
+
+.text-image{
+    margin-top: 4%;
+    display: flex;
+    width: 100%;
+}
+.text button{
+    margin-top: 40vh;
+    margin-left: 23vw;
+}
+.burgers-simple{
+    text-align: center;
+    margin-top: 4%;
+   
+    width: 80%;
+    margin-left: 10%;
+    
+    
+   
+}
+.À-PROPOS{
+    display: flex;
+}
+
+.À-PROPOS img {
+
+    margin-left: 10%;
+}
+.À-PROPOS p{
+    margin-top:13% ;
+    margin-left: -19%;
+}
+.À-PROPOS h2{
+    margin:10% ;
+    color: #fff;
+    background: #F76529;
+    padding: 10px 5px;
+    height: 30px;
+}
+.burgers-simple h2 {
+    font-size: 25px;
+    background-color: #000;
+    color: #FFF;
+    padding: 10px 5px;
+    border-bottom: 2px solid #F76529;
+    text-align: left;
+    width: 100%;
+    text-shadow: 0px 2px 3px;
+}
+.filtres nav ul li a{
+    /* background-color: #F76529; */
+    color: #000;
+    padding: 5px 3px;
+    border-radius: 3px;
+    border-bottom: 2px solid #F76529;
+}
+
+.filtres nav ul li a:hover {
+
+    color: #F76529;
+    border: 2px solid;
+}
+.filtres{
+    display: flex;
+}
+
+.filtres nav{
+   margin-top: 1%;
+   text-align: left;
+   margin-left: -11%;
+   
+}
+
+.nom-prix {
+    border: 0.5px solid white;
+    border-radius: 5px;
+    height: auto;
+    width: 100%;
+    background-color: #F76529;
+    padding:5%; 
+    color: #FFF;
+}
+
+.nom-prix li {
+    list-style-type: none;
+    margin-top: 5%;
+   
+}
+
+.nom-prix li a{
+    text-decoration: none;
+    
+}
+
+.Ajout1{
+    background: red;
+    margin-right: 15%;
+    color: #FFF;
+    padding: 4px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px;
+   
+}
+
+.detail1{
+    background: red;
+    margin-left: 1%; 
+    color: #FFF;
+    padding: 4px 10px;
+    border-radius: 5px;
+   /*  box-shadow: 0px 0px 2px 2px; */
+}
+
+.detail2{
+    background: #000;
+    margin-left: 2%;
+    color: #FFF;
+    padding: 4px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px;
+}
+
+.place-burger{
+    display: flex;
+    flex-wrap: wrap;
+    height: 90%;
+}
+
+.img {
+ height: 240px;;
+}
+.c-burgers{
+    border: 0.5px solid white;
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 3%;
+    text-align: $text-align-center;
+    border-radius: 10px;
+    height: 100%;
+    box-shadow: 1px 0px 8px;
+}
+.text button{
+    background: white;
+    color: #F76529;
+    border:2px solid white;
+    padding: 8px 5px;
+    width: 15%;
+    border-radius: 5px;
+    font-size: 10px;
+    margin-left: 0%;
+    margin-top: 1%;
+    text-shadow: 0 0 4px;
+}
+
+footer{
+    background-color: #000;
+    color: #FFF;
+    margin-top: 10%;
+    display: flex;
+}
+
+footer p{
+    padding: 25px 5px;
+    margin-left: 5%;
+}
+
+/* .sous-add-burger {
+    display: none; 
+    flex-direction: column;
+} */
+ .sous-add-burger a {
+     display: none; 
+    flex-direction: column;
+} 
+nav li a {
+    cursor: pointer;
+}
+ .sous-add-burger a:hover {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    background-color: red;
+}
+table {
+    border: 1px solid;
+    transform: translate(10%,30%);
+    width: 80%;
+}
+td {
+    border-bottom: 1px solid;
+     border-left: 1px solid; 
+    padding: 10px;
+}
+
+
+.menuderoulant{
+    height:0px;
+    list-style: none;
+    padding-left: 50px;
+    margin: 0px;
+}
+.menuderoulant li{
+    float: left;
+    width: 150px;
+}
+
+.menuderoulant li a:link, .menuderoulant li a:visited{
+    display: block;
+    color: #fff;
+   /*  background-color: #293245; */
+    padding: 0px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-right: 1px solid #fff;
+}
+
+.menuderoulant li a:hover {
+    background-color: red;
+}
+.menuderoulant li a:active{
+    background-color: blue;
+}
+
+.menuderoulant .sousmenu {
+    list-style-type: none;
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.menuderoulant .sousmenu li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    background-color: black;
+}
+
+.menuderoulant .sousmenu li a:link, .menuderoulant  li a:visited {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menuderoulant .sousmenu li a:hover{
+    background-color: #F76529;
+}
+
+.menuderoulant  li:hover .sousmenu{
+    display: block;
+}
+
+#admin-deconnexion{
+    margin-left: 10%;
+}
+.ajout-burger{
+    border: 1px solid;
+    width: 50%;
+    transform: translate(50%,20%);
+    border-radius: 10px;
+}
+.ajout-burger h1{
+    font-size: 2rem;
+    text-align: center;
+}
+.ajout-burger input {
+    width: 85%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 2%;
+    border: 1px solid;
+}
+.ajout-burger label{
+    margin: 2%;
+}
+.ajout-burger button {
+    background-color: #F76529;
+    color: #fff;
+    padding: 5px 15px;
+    border: 1px solid #000 ;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    margin-left:2% ;
+
+}
+.ajout-burger select {
+    margin-left: 2%;
+}
+
+.ajout-burger .form-floating {
+    display: inline-flex;
+    width: 100%;
+}
+
+.connexion-login{
+   /*  border: 1px solid; */
+    transform: translate(50%,50%);
+    width: 50%;
+    background-color: #F76529;
+    box-shadow: 1px 0px  12px;
+    border-radius: 5px;
+}
+
+.connexion-login input {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+}
+.connexion-login h3 {
+    text-align: center;
+    padding-top: 2%;
+}
+.connexion-login button {
+
+    background-color: #000;
+    color: #FFF;
+    padding: 5px 25px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 40%;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+}
+.connexion-login a {
+
+    color: #FFF;
+    margin-bottom: 5%;
+   
+    border: 0;
+    border-radius: 5px;
+}

@@ -1,0 +1,19 @@
+
+@mixin absolute($top,$bottom,$right,$left,$x,$y) {
+    position: absolute;
+    top:$top;
+    bottom:$bottom;
+    right:$right;
+    left: $left;
+    transform: translate($x,$y) ;
+
+}
+
+@mixin  height($height,$border-bottom) {
+
+    height: $height;
+    border-bottom: $border-bottom;
+ 
+    
+}
+

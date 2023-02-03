@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/screen.css">
+    <link rel="stylesheet" th:href="@{stylesheets/screen.css}">
+    <title>Document</title>
+</head>
+<body>
+
+  
+    <header class="navbar">
+        <div class="logo">
+            <p>LOGO</p>
+        </div>
+    <nav>
+        <ul>
+            <li><a href="">ACCUEUIL</a></li>
+            <li><a href="">A PROPOS</a></li>
+            <li><a href="">CONTACT</a></li>
+            <li><a href="">PANIER</a></li>
+            
+        </ul>
+    </nav>
+
+    <div  class="connex-inscrip">
+        <li sec:authorize="${isAuthenticated()}" ><a th:href="@{/login}">LOGIN</a></li>  
+        <li sec:authorize="isAnonymous()" ><a th:href="@{/inscription}">INSCRIPTION</a></li> 
+ 
+
+</div>
+    </header>
+<div class="accueil">
+  <div class="img-accueil">
+    <img src="images/pexels-israel-albornoz-12034622__1_-removebg-preview.png"width="500px">
+  </div>
+  <div class="text">
+    <p><h2 class="h2">Qu'est-ce qu'un bon burger ?</h2>
+        Un bon burger, c'est avant tout un bon pain.Pain, bun, ou encore hamburger bun, si son nom importe peu,<br/>
+        il représente pourtant un ingrédient essentiel d'un bon burger.Un bon pain doit être croustillant à l'extérieur,<br/>
+        avec une mie à la fois aérée et moelleuse à l'intérieur. Pour le decouvrir alors venez chez-nous à BRAZIL-BURGER 
+        pour gouter le meilleur burger du monde</p><br/>
+    <button>ESSAYEZ!!!</button>
+  </div>
+</div>
+<div class="À-PROPOS">
+  <h2>DÉCOUVERTE</h2><br/>
+  <p>Les couleurs chaudes comme le rouge et l'orange évoquent le feu.<br/>
+    Le vert et le marron font davantage penser à la nature. Les rouges<br/>
+    correspondent bien aux restaurants de viande alors que les verts seront<br/>
+    plus adaptés à un restaurant vegan. Le bleu, le violet et le gris sont moins<br/> susceptibles d'aiguiser l'appétit.
+    </p>
+  
+    <img src="images/thumb_Colonel_TS_Bacon_menue.png">
+ 
+   
+  
+</div>
+<div class="burgers-simple">
+    <h2> BURGER & MENU </h2>
+    
+    <div class="filtres">
+        <nav>
+         <ul>
+            <li><a href="">BURGERS</a></li>
+            <li><a href="">MENUS</a></li>
+            <li><a href="">BOISSONS</a></li>
+            <li><a href="">FRITTES</a></li>
+         </ul>
+    </nav>
+    </div>
+</div>
+<div class="place-burger" >
+    <div class="c-burgers" th:each="b: ${burgers}">
+        <div class="img-burger-nom">
+            <div class="img">
+                <img th:src="@{${'images/' + b.image }}" alt=""width="100%"height="100%">
+            </div>
+            <div class="nom-prix">
+                <p>Nom : <span th:text="${b.nom}"></span></p>
+                <p>Prix :<span th:text="${b.prix}" ></span>F</p>
+                <li><a class="Ajout1"href="">Ajouter</a><a class="detail2" th:href="@{/catalogue/detail/{id}(id=${b.id})}">detail</a></li>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="place-burger" >
+    <div class="c-burgers" th:each="m: ${menus}">
+        <div class="img-burger-nom">
+            <div class="img">
+                <img th:src="@{${'images/' + m.image }}" alt=""width="100%"height="100%">
+            </div>
+            <div class="nom-prix">
+                <p>Nom : <span th:text="${m.nom}"></span></p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<footer>
+    <p>@Copyright</p>
+    <nav>
+        <li><a href=""><i></i></a></li>
+        <li><a href=""><i></i></a></li>
+        <li><a href=""><i></i></a></li>
+    </nav>
+</footer>
+</html>
+
